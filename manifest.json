@@ -1,0 +1,21 @@
+{
+	"name": "anonymous twitter",
+	"description": "make your twitter anonymous.",
+	"version": "0.1",
+	"manifest_version": 2,
+
+	"icons": {
+		"48": "icon.png"
+	},
+
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "change!"
+	},
+
+	"content_scripts": [{
+		"matches": ["http://twitter.com/*", "https://twitter.com/*"],
+		"js": ["anonymize.js"],
+		"run_at": "document_end"
+	}]
+}
